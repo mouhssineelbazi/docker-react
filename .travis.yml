@@ -1,0 +1,12 @@
+sudo: required 
+Services:
+    -docker 
+
+
+before_install:
+    -docker build -t mouhssineelbazi/docker-react -f dockerfile.dev .
+
+
+script:
+    -docker run mouhssineelbazi/docker -react npm run test -- --coverage     
+    
