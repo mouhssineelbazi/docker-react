@@ -8,6 +8,5 @@ before_install:
 
 
 script:
-    - npm install coverage
     - docker run mouhssineelbazi/docker-react npm run test -- --coverage 
-    
+    - npm install coverage
